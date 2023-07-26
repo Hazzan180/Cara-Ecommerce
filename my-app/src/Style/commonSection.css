@@ -1,0 +1,32 @@
+.common-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url('../assets/images/banner/b1.jpg');
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+.common-section h1{
+    color: #ffff;
+}
+.common-section p{
+    color: #e8f6ea;
+}
+
+/* ipad */
+@media (max-width:799px){
+    .common-section{
+        height:20vh;
+    }
+}
+
+/* mobile */
+@media (max-width:477px){
+    .common-section{
+        height:30vh;
+    }
+}

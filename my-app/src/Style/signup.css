@@ -1,0 +1,78 @@
+.form-body{
+   display: grid;
+   place-items: center;
+   height: 150vh;
+}
+.form-container{
+    background-color: #E3E6F3;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+.form-header img{
+    width: 300px;
+    height: 300px;
+}
+.form-header h2{
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.login-btn{
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+.login-btn:hover,
+.form-flex:hover{
+  color: #088178;
+  background-color: #fff;
+}
+.form-container p{
+    margin-bottom: 30px;
+}
+.form-container a {
+    text-decoration: none;
+    color: #088178;
+    font-size: 17px;
+}
+
+.form-flex{
+    width: 100%;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    background: #088178;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.form-group input{
+    cursor: pointer;
+}
+.span{
+    position: absolute;
+    top: 10px;
+}
+.file::file-selector-button{
+    display: none;
+}
+
+/* mobile */
+@media (max-width:477px){
+    .form-container{
+        padding: 10px 20px;
+    }
+}

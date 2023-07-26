@@ -1,0 +1,129 @@
+.prodetails{
+    display: flex;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+.single-pro-img{
+    border:  1px solid #cce7d0;
+    width: 40%;
+    margin-right: 50px;
+}
+.prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+.flex{
+    display: flex;
+    gap: 50px;
+    text-align: center;
+}
+.flex span i{
+    font-size: 20px;
+    color: rgb(235, 171, 53);
+}
+.prodetails .single-pro-details h4{
+    margin-bottom: 10px;
+}
+.spa{
+    margin-bottom: 30px;
+}
+.prodetails button,
+.review-form button{
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s;
+  background-color: #088178;
+}
+.prodetails button:hover,
+.review-form button:hover{
+    color: #088178;
+    background-color: #fff;
+    border: 1px solid #088178;
+}
+
+.desRes p{
+    font-size: 23px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+.displayFlex{
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.displayFlex h4:hover{
+    color: #088178;
+}
+.displayFlex h4.active{
+    color: #088178;
+}
+
+.review span{
+    font-size: 20px;
+}
+
+.review-form{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+.review-form h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.form-group input, .form-group textarea{
+    width: 100%;
+    border: 1px solid #cce7d0;
+    border-radius: 5px;
+    padding: 20px 20px;
+}
+.form-group input:focus, .form-group textarea:focus{
+    outline: none;
+}
+.form-group{
+    margin-bottom: 30px;
+}
+
+.form-group span{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color:  rgb(235, 171, 53);
+    font-weight: 600;
+    cursor: pointer;
+}
+.form-group span:hover{
+    color: #088178;
+}
+.flexs{
+    display: flex;
+    gap: 25px;
+    text-align: center;   
+}
+
+/* ipad */
+@media (max-width:799px){
+   .prodetails{
+    display: flex;
+    flex-direction: column;
+   }
+   .single-pro-img{
+    width: 100%;
+    margin-right: 0px;
+   }
+   .prodetails .single-pro-details{
+    width: 100%;
+   }
+}
+  
+/* mobile */
+@media (max-width:477px){
+   
+}

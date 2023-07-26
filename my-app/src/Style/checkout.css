@@ -1,0 +1,81 @@
+.formB{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.form{
+    max-width: 350px;
+    background-color: #E3E6F3;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+}
+.checkout-method{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.butto{
+    background-color: #088178;
+    color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
+}
+.butto i{
+    font-size: 30px;
+}
+.butto:is(:hover, :focus){
+    background-color: #fff;
+    color: #088178;
+}
+
+.checkout-information,
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.input-group{
+    gap: 5px;
+}
+.input-group label{
+    font-size: 14px;
+    color: #088178;
+    font-weight: bold;
+}
+.input-group input{
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+}
+.input-group input:focus{
+    outline: none;
+}
+.horizontal-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+.checkout{
+    width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.5s;
+}
+.checkout:is(:hover, :focus){
+    background-color: #fff;
+    color: #088178;
+}

@@ -1,0 +1,100 @@
+.pro-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.pro-card{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border:  1px solid #cce7d0;
+    border-radius: 25px;
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.pro-card img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.pro-card .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+.pro-card .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+.pro-card .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.pro-card .des i{
+    font-size: 12px;
+    color: rgba(243, 181, 25);
+}
+
+.pro-card .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+.pro-card .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    transition: 0.2s;
+}
+
+.pro-card .heart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    position: absolute;
+    right: 60px;
+    bottom: 20px;
+    transition: 0.2s;
+}
+
+.pro-card .heart:hover,
+.pro-card .cart:hover{
+    background-color: #088178;
+    color: #e8f6ea;
+}
+/* ipad */
+@media (max-width:799px){
+    .pro-container{
+        justify-content: center;
+    }
+    .pro-card{
+        margin: 15px;
+    }
+}
+
+/* mobile */
+@media (max-width:477px){
+    .pro-card{
+        width: 100%;
+    }
+}

@@ -1,0 +1,99 @@
+.form-body{
+    height: 150vh;
+    display: grid;
+    place-items: center;
+}
+.form-container{
+    background-color: #E3E6F3;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+.form-header img{
+    width: 300px;
+    height: 300px;
+}
+.form-header h2{
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+.login-btn{
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+.login-btn:hover,
+.form-flex:hover{
+  color: #088178;
+  background-color: #fff;
+}
+.form-container p{
+    margin-bottom: 30px;
+}
+.form-container a {
+    text-decoration: none;
+    color: #088178;
+    font-size: 17px;
+}
+.form-group input{
+    cursor: pointer;
+}
+.form-flex{
+    position: relative;
+    height: 9vh;
+    width: 100%;
+}
+.form-flex .google-img{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.form-flex .text{
+    position: absolute;
+    right: 15px;
+    top: 53%;
+    transform: translateY(-50%);
+}
+
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E3E6F3;
+    color: #8b8b8b;
+    padding: 0 15px;
+}
+
+.span{
+    position: absolute;
+    top: 10px;
+}
+button{
+    border: none;
+}
+
+/* mobile */
+@media (max-width:477px){
+    .form-container{
+        padding: 10px 20px;
+    }
+}
