@@ -1,7 +1,8 @@
 
 ## Cara
 
-<img src="../assets/images/hero4.png" width=""/>
+![2022](https://github.com/Hazzan180/Cara-Ecommerce/assets/103348976/c2a7116b-366f-4f1e-89bf-19a39924c487)
+
   
 ## 📝 Description
 - With the help of this project we can purchase product online.
