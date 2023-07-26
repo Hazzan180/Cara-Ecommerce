@@ -2,7 +2,10 @@
 ## Cara
 
 
-https://github.com/Hazzan180/Cara-Ecommerce/assets/103348976/fff99505-5182-4834-a031-af7b2a9e6aa2
+
+https://github.com/Hazzan180/Cara-Ecommerce/assets/103348976/ca2fb97b-e4ef-4ce8-a2d1-000ac7ffa1ff
+
+
 
 
 
