@@ -52,16 +52,16 @@ const Checkout = () => {
         </div>
         <div className="input-group">
             <label htmlFor="number">Card Number</label>
-            <input type="text" placeholder='000 000 000' ref={cardNo} required/>
+            <input type="number" placeholder='000 000 000' ref={cardNo} required/>
         </div>
         <div className="horizontal-grid">
         <div className="input-group">
             <label htmlFor="date">Expiration date</label>
-            <input type="text" placeholder='12/27' ref={cardEdate} required/>
+            <input type="date" placeholder='12/27' ref={cardEdate} required/>
         </div>
         <div className="input-group">
             <label htmlFor="cvv">CVV</label>
-            <input type="text" placeholder='CVV' ref={cardCvv} required/>
+            <input type="number" placeholder='CVV' ref={cardCvv} required/>
         </div>
         </div>
     </div>
