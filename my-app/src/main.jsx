@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, HashRouter} from 'react-router-dom';
 import 'remixicon/fonts/remixicon.css';
 import {Provider} from 'react-redux'
 
@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
      <Provider store={Store}>
      <PersistGate loading={null} persistor={persistor}>
         <ToastContainer 
@@ -28,6 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
         </PersistGate>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 )
