@@ -12,7 +12,7 @@ import './header.css';
 
 const Nav_links = [
   {
-    path: 'home',
+    path: '/',
     display: 'Home',
   },
   {
