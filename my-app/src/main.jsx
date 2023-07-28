@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
      <Provider store={Store}>
      <PersistGate loading={null} persistor={persistor}>
         <ToastContainer 
@@ -28,6 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
         </PersistGate>
         </Provider>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
 )
