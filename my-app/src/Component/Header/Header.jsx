@@ -89,7 +89,7 @@ const Header = () => {
     try {
       await logOut()
       toast.success('Logged out successfully');
-      navigate('/home');
+      navigate('/');
       // Redirect to your desired page after successful signup
     } catch (err) {
       toast.error(err.message);
