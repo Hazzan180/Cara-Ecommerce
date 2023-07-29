@@ -1,3 +1,4 @@
+/* The code is importing various components and libraries from different files and packages. */
 import React,{useState, useEffect} from 'react'
 import Helment from '../Component/Helment/Helment'
 import Slider from '../Component/Swiper/Slider'
@@ -16,6 +17,8 @@ import Clock  from '../Component/UI/Clock'
 
 const Home = () => {
   
+  /* The code is using the `useState` hook from React to create three state variables:
+  `featuredProduct`, `newArrivals`, and `newAdded`. */
   const [featuredProduct, setFeaturedProduct] = useState([]);
   const [newArrivals, setNewArrivals] = useState([]);
   const [newAdded, setNewAdded] = useState([]);
@@ -23,6 +26,9 @@ const Home = () => {
   const navigate = useNavigate();
 
 
+  /* The `useEffect` hook is used to perform side effects in a functional component. In this code, the
+  `useEffect` hook is used to fetch and set the values of the `featuredProduct`, `newArrivals`, and
+  `newAdded` state variables. */
   useEffect(() => {
     const fFeaturedProduct = product.filter((item) => item.category === 'shoe');
     const fNewArrivals = newArrival.filter((item) => item.category === 'newArrivals');
@@ -37,6 +43,8 @@ const Home = () => {
     navigate('/shop')
   }
 
+  /* The `return` statement is returning JSX code that represents the structure and content of the Home
+  component. */
   return (
     <Helment title='Home'>
       <section className='hero'>

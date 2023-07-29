@@ -1,3 +1,4 @@
+/* The code is importing various dependencies and components for the Cart component. */
 import React, {useEffect} from 'react'
 
 import Helment from '../Component/Helment/Helment';
@@ -12,26 +13,41 @@ import {useSelector, useDispatch} from 'react-redux'
 
 import {useNavigate} from 'react-router-dom'
 
-//const cartItems = JSON.parse(localStorage.getItem('cartItem'))
 
 const Cart = () => {
+  /* The code is using the `useSelector` hook from the `react-redux` library to select and retrieve
+  data from the Redux store. */
   const cartItems= useSelector(state=> state.cart.cartItem)
   const totalAmount = useSelector(state => state.cart.totalAmount)
 
+ /* The code is using the `useNavigate` hook from the `react-router-dom` library to navigate to
+ different routes in the application. */
   const navigate = useNavigate()
 
+  /**
+   * The navigateTo function is used to navigate to the '/shop' route.
+   */
   const navigateTo = () => {
     navigate('/shop')
   }
 
+  /**
+   * The function `navigateToC` is used to navigate to the '/checkout' page.
+   */
   const navigateToC = () => {
     navigate('/checkout')
   }
 
+  /* The `useEffect` hook is used to perform side effects in a functional component. In this case, the
+  `useEffect` hook is used to scroll the window to the top (position 0, 0) whenever the `cartItems`
+  state changes. This ensures that when the user adds or removes items from the cart, the window is
+  automatically scrolled to the top of the page. */
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [cartItems])
 
+ /* The `return` statement in the code is returning the JSX (JavaScript XML) code that represents the
+ structure and content of the Cart component. */
   return (
     <Helment title='Cart'>
       <CommonSection title='#Cart' sumarry='Add your coupon code & SAVE upto 70%!'/>
@@ -108,6 +124,8 @@ const Cart = () => {
   )
 }
 
+/* The `Tr` component is a functional component that represents a row in the table of the Cart
+component. It receives the `item` prop, which contains the data for a specific product in the cart. */
 const Tr = ({item}) => {
   const dispatch = useDispatch()
 

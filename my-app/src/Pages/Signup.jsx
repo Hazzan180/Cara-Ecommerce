@@ -1,3 +1,4 @@
+/* The code is importing various modules and components from different files and libraries. */
 import React, { useState } from 'react';
 import '../Style/signup.css'
 
@@ -11,6 +12,8 @@ import {useNavigate} from 'react-router-dom'
 import {useUserAuth} from '../Context/useAuthContext'
 
 const Signup = () => {
+  /* The code is using the `useState` hook from React to create three state variables: `email`,
+  `password`, and `loading`. */
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -18,6 +21,10 @@ const Signup = () => {
 
   const navigate = useNavigate()
 
+  /**
+   * The function `handleSubmit` is an asynchronous function that handles form submission, signs up the
+   * user with the provided email and password, and redirects to the login page if successful.
+   */
   const handuleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -35,6 +42,7 @@ const Signup = () => {
 
   }
 
+  /* The `return` statement is returning JSX code that represents the UI of the Signup component. */
   return (
     <Helment title='SignUp'>
     <section className='form-body'>

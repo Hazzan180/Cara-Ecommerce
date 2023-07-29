@@ -1,3 +1,4 @@
+/* The code is importing various components and libraries from different files and packages. */
 import React from 'react'
 import '../Style/cart.css'
 
@@ -12,6 +13,7 @@ import {wishListAction} from '../Redux/Slice/WishListSlice'
 
 import img from  '../assets/images/empty/wishList.png'
 
+/* The `wishList` function is a React functional component that renders the wishlist page. */
 const wishList = () => {
   const wishList = useSelector(state => state.wishList.wishListSliceItem)
   return(
@@ -51,6 +53,8 @@ const wishList = () => {
   )
 }
 
+/* The `Tr` component is a functional component that renders a table row (`<tr>`) in the wishList
+component. It takes an `item` prop as input, which represents a product in the wishlist. */
 const Tr = ({item}) => {
   const dispatch = useDispatch()
 

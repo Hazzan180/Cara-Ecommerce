@@ -1,3 +1,4 @@
+/* The code is importing various modules and components that are needed for the About component. */
 import React from 'react'
 import '../Style/about.css'
 
@@ -8,6 +9,8 @@ import Helement from '../Component/Helment/Helment'
 import CommonSection from '../Component/UI/commonSection'
 import Features from '../Component/Feature/Feature'
 
+/* The code is defining a functional component named "About". This component returns JSX code that
+represents the structure and content of the About page. */
 const About = () => {
   return (
     <Helement title='About'>

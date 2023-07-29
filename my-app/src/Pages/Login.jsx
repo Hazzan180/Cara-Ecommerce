@@ -1,3 +1,4 @@
+/* The code is importing various modules and components from different files and libraries. */
 import React, {useState} from 'react'
 import '../Style/login.css'
 
@@ -14,6 +15,8 @@ import {useUserAuth} from '../Context/useAuthContext'
 
 const Login = () => {
 
+  /* The code is using the `useState` hook from React to create three state variables: `email`,
+  `password`, and `loading`. */
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -21,6 +24,10 @@ const Login = () => {
 
   const navigate = useNavigate()
 
+ /**
+  * The function `handleSubmit` is an asynchronous function that handles form submission, logs in the
+  * user, and redirects them to the checkout page if successful.
+  */
   const handuleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -37,6 +44,11 @@ const Login = () => {
     }
   }
 
+  /**
+   * The function `handuleGoogleSignin` is an asynchronous function that handles the Google sign-in
+   * process, displays success or error messages using toast notifications, and redirects the user to
+   * the checkout page upon successful sign-in.
+   */
   const handuleGoogleSignin = async (e) => {
     e.preventDefault();
 
@@ -51,6 +63,7 @@ const Login = () => {
     }
   }
 
+  /* The `return` statement in the code is rendering JSX elements to be displayed on the webpage. */
   return (
     <Helment title='Login'>
        <section className='form-body'>

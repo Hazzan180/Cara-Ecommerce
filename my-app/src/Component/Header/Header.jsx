@@ -10,6 +10,9 @@ import {useSelector} from 'react-redux';
 import {useUserAuth} from '../../Context/useAuthContext'
 import './header.css';
 
+/* `Nav_links` is an array of objects that contains the paths and display names for the navigation
+links in the header component. Each object represents a navigation link and has two properties:
+`path` and `display`. */
 const Nav_links = [
   {
     path: '/',
@@ -30,19 +33,38 @@ const Nav_links = [
 ]
 
 const Header = () => {
+  /* `const navRef = useRef(null)` and `const profileRef = useRef(null)` are creating two ref objects
+  using the `useRef` hook. */
   const navRef = useRef(null) 
   const profileRef = useRef(null)
+
+  /* `const {user, logOut} = useUserAuth()` is using the `useUserAuth` custom hook to access the `user`
+  and `logOut` values from the authentication context. The `user` value represents the currently
+  logged-in user, and the `logOut` function is used to log the user out of the application. */
   const {user, logOut} = useUserAuth()
 
+  /**
+   * The openMenu function adds the 'active' class to the navRef element.
+   */
   const openMenu = () => navRef.current.classList.add('active')
 
+  /**
+   * The closeMenu function removes the 'active' class from the navRef element.
+   */
   const closeMenu = () => navRef.current.classList.remove('active')
 
+  /**
+   * The toggleProfile function toggles the 'show' class on the profileRef element.
+   */
   const toggleProfile = () => profileRef.current.classList.toggle('show')
 
   const navigate = useNavigate()
   
 
+ /**
+  * The above code defines two functions, `navigateToCart` and `navigateToWishlist`, which navigate to
+  * different routes when called.
+  */
   const navigateToCart = () => {
     navigate('/cart')
   }
@@ -51,10 +73,18 @@ const Header = () => {
     navigate('/wishList')
   }
 
+  /* `const cartQuantity = useSelector(state => state.cart.totalQuantity)` and `const cartWishList =
+  useSelector(state => state.wishList.totalQuantity)` are using the `useSelector` hook from the
+  `react-redux` library to access the `totalQuantity` values from the `cart` and `wishList` slices
+  of the Redux store. */
   const cartQuantity = useSelector(state => state.cart.totalQuantity)
 
   const cartWishList = useSelector(state => state.wishList.totalQuantity)
 
+  /**
+   * The handleLogout function logs the user out, displays a success message, and redirects to the home
+   * page.
+   */
   const handleLogout = async () => {
     try {
       await logOut()

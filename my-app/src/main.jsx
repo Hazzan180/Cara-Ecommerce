@@ -1,3 +1,4 @@
+/* The code you provided is importing various modules and components for a React application. */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
@@ -14,6 +15,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+ /* The code you provided is wrapping the entire application in a series of components and modules. */
   <React.StrictMode>
     <HashRouter>
      <Provider store={Store}>

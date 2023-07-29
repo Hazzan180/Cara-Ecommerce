@@ -1,3 +1,4 @@
+/* The code is importing necessary dependencies and styles for the Checkout component. */
 import React,{useRef} from 'react'
 import '../Style/checkout.css'
 
@@ -5,17 +6,27 @@ import {useNavigate} from 'react-router-dom'
 
 const Checkout = () => {
     
+    /* The code is using the `useRef` hook from React to create four references (`cardName`, `cardNo`,
+    `cardEdate`, `cardCvv`) that will be used to access the values of the input fields in the form.
+    These references are assigned initial values of an empty string. */
     const cardName = useRef('')
     const cardNo = useRef('')
     const cardEdate = useRef('')
     const cardCvv = useRef('')
 
+   /* The code is using the `useNavigate` hook from the `react-router-dom` library to create a
+   `navigate` function. This function can be used to programmatically navigate to a different route
+   in the application. */
     const navigate = useNavigate()
 
     const navigateTo = () => {
         navigate('/done')
     }
 
+   /**
+    * The submitHandler function takes form input values, creates an object with those values, logs the
+    * object to the console, and then calls the navigateTo function.
+    */
     const submitHandler = (e) => {
         e.preventDefault()
         const cardNameMsg = cardName.current.value
@@ -34,6 +45,8 @@ const Checkout = () => {
         navigateTo()
     }
 
+ /* The `return` statement is returning JSX code that represents the structure and content of the
+ Checkout component. */
   return (
     <section className='formB'>
     <form className='form' onSubmit={submitHandler}>

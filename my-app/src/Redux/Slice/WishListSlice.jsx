@@ -1,15 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify';
 
+/* The `initialState` constant is defining the initial state of the `wishList` slice in the Redux
+store. It has two properties: `wishListSliceItem` and `totalQuantity`. */
 const initialState = {
     wishListSliceItem: [],
     totalQuantity: 0,
 }
 
+/* The code is creating a Redux slice called `WishListSlice` using the `createSlice` function from the
+`@reduxjs/toolkit` library. */
 const WishListSlice = createSlice({
   name: 'wishList',
   initialState,
   reducers: {
+    /* The `addItem` function is a Redux reducer that is responsible for adding an item to the
+    `wishListSliceItem` array in the Redux store. */
     addItem: (state, action) =>{
         const newItem = action.payload
         const existingItem = state.wishListSliceItem.find((item) =>
@@ -32,6 +38,9 @@ const WishListSlice = createSlice({
         }
         //console.log(state.totalQuantity)
     },
+
+   /* The `deleteItem` function is a Redux reducer that is responsible for deleting an item from the
+   `wishListSliceItem` array in the Redux store. */
     deleteItem:(state, action) => {
       const id = action.payload
       const existingItem = state.wishListSliceItem.find(item => item.id === id)

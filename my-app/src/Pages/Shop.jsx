@@ -1,3 +1,4 @@
+/* The code is importing various components and assets that are needed for the Shop component. */
 import React, {useState, useEffect} from 'react'
 
 import '../Style/shop.css'
@@ -15,6 +16,10 @@ const Shop = () => {
   const [productData, setProductData] = useState(Products)
   
 
+ /**
+  * The function `handleFilter` filters a list of products based on the selected category and updates
+  * the state with the filtered products.
+  */
   const handleFilter = e => {
     const filterValue = e.target.value
 
@@ -83,6 +88,10 @@ const Shop = () => {
     }
   }
 
+  /**
+   * The `handleSearch` function filters a list of products based on a search value and updates the
+   * product data state.
+   */
   const  handleSearch = e => {
     const searchValue = e.target.value
 
@@ -91,6 +100,8 @@ const Shop = () => {
     setProductData(searchProduct)
   }
 
+  /* The `return` statement is returning JSX code that represents the structure and content of the Shop
+  component. */
   return (
    <Helment title='Shop'>
     <CommonSection title='#stayhome' sumarry='Save more with coupons & up to 70% off!'/>
