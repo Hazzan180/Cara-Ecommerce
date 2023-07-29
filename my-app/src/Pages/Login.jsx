@@ -55,7 +55,7 @@ const Login = () => {
     try {
       await googleSignIn()
       toast.success('Logged in successfully');
-      navigate('/checkout');
+      navigate('/cart');
       // Redirect to your desired page after successful signup
     } catch (err) {
       toast.error(err.message);
